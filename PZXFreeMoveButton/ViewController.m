@@ -22,7 +22,7 @@
     
     button.backgroundColor = [UIColor cyanColor];
 //    button
-    
+    button.titleLabel.text = @"点击";
     [button setActionBlock:^{
         
         NSLog(@"tap");

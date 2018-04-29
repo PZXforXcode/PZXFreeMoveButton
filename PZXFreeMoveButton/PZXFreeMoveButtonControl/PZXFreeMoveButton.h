@@ -10,6 +10,8 @@
 
 @interface PZXFreeMoveButton : UIImageView
 
+@property(nonatomic,strong)UILabel *titleLabel;
+
 -(void)setAction:(NSString*)action;
 
 -(void)setActionBlock:(void(^)(void))block; 

@@ -29,6 +29,14 @@
         UITapGestureRecognizer *tap=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapMe)];
         [self addGestureRecognizer:tap];
         _frame  = frame;
+        
+        
+        _titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, _frame.size.width, _frame.size.height)];
+        _titleLabel.textAlignment = NSTextAlignmentCenter;
+        _titleLabel.font = [UIFont systemFontOfSize:14.f];
+        _titleLabel.textColor = [UIColor blackColor];
+        [self addSubview:_titleLabel];
+        
     }
     return self;
 }
@@ -39,6 +47,10 @@
     [[self superview] bringSubviewToFront:self];
 }
 
+-(void)setTitleLabel:(UILabel *)titleLabel{
+    
+    _titleLabel = titleLabel;
+}
 
 -(void)touchesMoved:(NSSet*)touches withEvent:(UIEvent*)event {
     CGPoint pt = [[touches anyObject] locationInView:self];
