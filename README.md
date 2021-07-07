@@ -19,6 +19,14 @@
         
     }];
     [self.view addSubview:button];
+    //------Swift使用方法--------
+        let freeButton = PZXFreeMoveButton.init(frame: CGRect.init(x: 0, y: 200, width: 60, height: 60))
+        freeButton.backgroundColor = .cyan
+        freeButton.titleLabel.text = "点击"
+        freeButton.setActionBlock {
+            print("tap")
+        }
+        self.view.addSubview(freeButton)
 ```
 
 
