@@ -1,5 +1,6 @@
 # PZXFreeMoveButton
 在屏幕上 自由拖动的悬浮按钮，会自己吸附到边缘
+支持Swift版本，特别鸣谢 @Mvp丶俊奕
 ## 查看效果
 ![悬浮按钮.gif](https://upload-images.jianshu.io/upload_images/19409325-2c7827ed0e35b76e.gif?imageMogr2/auto-orient/strip)
 
