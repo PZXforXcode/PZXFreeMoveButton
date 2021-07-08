@@ -71,6 +71,15 @@
 
 
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    [self changeLocation];
+}
+
+-(void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
+    [self changeLocation];
+}
+
+-(void)changeLocation{
+    
     CGPoint point = self.center;
     if (point.x>[self superview].frame.size.width/2.0) {
         [UIView animateWithDuration:0.2 animations:^{
@@ -86,9 +95,6 @@
             self.frame = CGRectMake(0, self.frame.origin.y, self.frame.size.width, self.frame.size.height);
         }];
     }
-}
-
--(void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
 }
 
 -(void)tapMe {
